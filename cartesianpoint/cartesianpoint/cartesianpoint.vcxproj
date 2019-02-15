@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0F68B2CC-AB41-4C02-BB42-F950A44DB8A5}</ProjectGuid>
-    <RootNamespace>task2c</RootNamespace>
+    <ProjectGuid>{17FB935A-0D66-4AFD-91EA-A45559200394}</ProjectGuid>
+    <RootNamespace>cartesianpoint</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,13 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="comments.h" />
-    <ClInclude Include="counta.h" />
-    <ClInclude Include="matchword.h" />
-    <ClInclude Include="replacetab.h" />
+    <ClCompile Include="cartesian.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

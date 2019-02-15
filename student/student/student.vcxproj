@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0F68B2CC-AB41-4C02-BB42-F950A44DB8A5}</ProjectGuid>
-    <RootNamespace>task2c</RootNamespace>
+    <ProjectGuid>{28B76DF6-BDB8-4F7F-B6B5-2A52358C27A6}</ProjectGuid>
+    <RootNamespace>student</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,13 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="comments.h" />
-    <ClInclude Include="counta.h" />
-    <ClInclude Include="matchword.h" />
-    <ClInclude Include="replacetab.h" />
+    <ClCompile Include="student.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
