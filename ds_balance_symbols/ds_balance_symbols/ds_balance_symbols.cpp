@@ -81,15 +81,12 @@ _stack_::~_stack_()
 int main()
 {
 	_stack_ s1;
-	int len,z;
-	char *s2;
-	cout << "Enter the length of the string"<<endl;
-	cin >> z;
-	s2 = new char[z];
+	int len;
+	char s2[15];
 	cout << "Enter the string" << endl;
 	cin >> s2;
 	len = strlen(s2);
-	int l,i,flag=0;
+	int l, i, flag = 0;
 	char ch;
 	cout << "Enter the size of stack";
 	cin >> l;
@@ -99,29 +96,29 @@ int main()
 		ch = s2[i];
 		switch (ch)
 		{
-		case '(' : 
-		case '[' :
-		case '{' : s1.push(ch);
-			       break;
-		case ')' :
-		case ']' :
+		case '(':
+		case '[':
+		case '{': s1.push(ch);
+			break;
+		case ')':
+		case ']':
 		case '}': if (((ch == ')') && (s1.peek() == '(')) || ((ch == ']') && (s1.peek() == '[')) || ((ch == '}') && (s1.peek() == '{')))
-				  {
-						s1.pop();
-						break;
-				  }
+		{
+			s1.pop();
+			break;
+		}
 				  else
 				  {
 					  flag = 1;
 					  break;
 				  }
 
-        }
+		}
 	}
 	if ((s1.IsEmpty()) && flag != 1)
 		cout << "Balanced" << endl;
 	else
-		cout << "Unbalanced"<<endl;
+		cout << "Unbalanced" << endl;
 	cout << "flag value is " << flag << endl;
 	system("pause");
 	return 0;
