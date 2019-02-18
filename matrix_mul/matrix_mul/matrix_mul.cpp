@@ -64,5 +64,5 @@ int main()
 	m3 = mult(m1, m2);
 	m3.display();
 	system("pause");
-	return 0; s
+	return 0;
 }
