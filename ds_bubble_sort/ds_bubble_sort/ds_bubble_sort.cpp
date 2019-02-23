@@ -3,17 +3,18 @@ using namespace std;
 void bubble_sort(int[], int);
 int main()
 {
-	int *a;
-	int l, i, j;
+	int *array;
+	int length, i, j;
 	cout << "Enter the length of the array" << endl;
-	cin >> l;
-	a = new int[l];
+	cin >> length;
+	array = new int[length];
 	cout << "Enter the elements to be sorted" << endl;
-	for (i = 0; i < l; i++)
+	for (i = 0; i < length; i++)
 	{
-		cin >> a[i];
+		cin >> array[i];
 	}
-	bubble_sort(a, l);
+	bubble_sort(array, length);
+	delete array;
 	system("pause");
 	return 0;
 }
