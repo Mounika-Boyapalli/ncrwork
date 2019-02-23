@@ -14,6 +14,7 @@ int main()
 		cin >> array[k];
 	}
 	insertion_sort(array, length);
+	delete array;
 	system("pause");
 	return 0;
 }
