@@ -3,17 +3,17 @@ using namespace std;
 void insertion_sort(int[], int);
 int main()
 {
-	int *a;
-	int l, k;
+	int *array;
+	int length, k;
 	cout << "Enter the length of the array" << endl;
-	cin >> l;
-	a = new int[l];
+	cin >> length;
+	array = new int[length];
 	cout << "Enter the elements to be sorted" << endl;
-	for (k = 0; k < l; k++)
+	for (k = 0; k < length; k++)
 	{
-		cin >> a[k];
+		cin >> array[k];
 	}
-	insertion_sort(a, l);
+	insertion_sort(array, length);
 	system("pause");
 	return 0;
 }
