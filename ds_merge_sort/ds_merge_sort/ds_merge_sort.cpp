@@ -4,18 +4,19 @@ int* merge_sort(int[],int, int);
 void merge(int[],int, int, int);
 int main()
 {
-	int *a;
-	int l, k;
+	int *array;
+	int length, k;
 	cout << "Enter the length of the array" << endl;
-	cin >> l;
-	a = new int[l];
+	cin >> length;
+	array = new int[length];
 	cout << "Enter the elements to be sorted" << endl;
-	for (k = 0; k < l; k++)
-		cin >> a[k];
-	a = merge_sort(a,0,l - 1);
+	for (k = 0; k < length; k++)
+		cin >> array[k];
+	array = merge_sort(array,0,length - 1);
 	cout << "The sorted array is: " << endl;
-	for (k = 0; k < l; k++)
-		cout << " " << a[k];
+	for (k = 0; k < length; k++)
+		cout << " " << array[k];
+	delete array;
 	system("pause");
 	return 0;
 }
