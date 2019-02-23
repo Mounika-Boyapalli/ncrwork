@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{036330D7-7BD1-4349-A7C1-BF2B68B2B606}</ProjectGuid>
-    <RootNamespace>dsheapsort</RootNamespace>
+    <ProjectGuid>{A34A7BB0-FDEE-44C3-BAD8-D326E3F9D557}</ProjectGuid>
+    <RootNamespace>dslinearsearch</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ds_linear_search.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
