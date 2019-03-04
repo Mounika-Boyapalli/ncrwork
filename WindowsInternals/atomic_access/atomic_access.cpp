@@ -30,7 +30,6 @@ int main()
 			return FALSE;
 		}
 		handle_array[0] = hThread1;
-		CloseHandle(hThread1);
 		hThread2 = CreateThread(NULL, 0, inc_func2, NULL, 0, &dwThreadId2);
 		if (hThread2 == NULL)
 		{
@@ -39,14 +38,15 @@ int main()
 			return FALSE;
 		}
 		handle_array[1] = hThread2;
-		CloseHandle(hThread2);
-		printf("\nValue of global variable is %d", g_var);
+		printf("\nValue of global variable is %ld", g_var);
 		if (g_var == 1)
 		{
 			printf("\nSynchronization Issue");
 			break;
 		}
 	}
+	CloseHandle(hThread1);
+	CloseHandle(hThread2);
 	getchar();
 	return 0;
 }
