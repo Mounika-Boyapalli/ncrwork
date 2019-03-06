@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assignment_review", "Assignment_review\Assignment_review.vcxproj", "{B59E25F3-4FB9-48CF-AD50-9387922615F0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calculator", "Assignment_review\Assignment_review.vcxproj", "{B59E25F3-4FB9-48CF-AD50-9387922615F0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stringFunc", "stringFunc\stringFunc.vcxproj", "{71657576-CCAD-4030-A485-5263249FE579}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stringExpand", "stringExpand\stringExpand.vcxproj", "{AC19A3FE-59F5-4A81-9088-73B587E1AD13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,22 @@ Global
 		{B59E25F3-4FB9-48CF-AD50-9387922615F0}.Release|x64.Build.0 = Release|x64
 		{B59E25F3-4FB9-48CF-AD50-9387922615F0}.Release|x86.ActiveCfg = Release|Win32
 		{B59E25F3-4FB9-48CF-AD50-9387922615F0}.Release|x86.Build.0 = Release|Win32
+		{71657576-CCAD-4030-A485-5263249FE579}.Debug|x64.ActiveCfg = Debug|x64
+		{71657576-CCAD-4030-A485-5263249FE579}.Debug|x64.Build.0 = Debug|x64
+		{71657576-CCAD-4030-A485-5263249FE579}.Debug|x86.ActiveCfg = Debug|Win32
+		{71657576-CCAD-4030-A485-5263249FE579}.Debug|x86.Build.0 = Debug|Win32
+		{71657576-CCAD-4030-A485-5263249FE579}.Release|x64.ActiveCfg = Release|x64
+		{71657576-CCAD-4030-A485-5263249FE579}.Release|x64.Build.0 = Release|x64
+		{71657576-CCAD-4030-A485-5263249FE579}.Release|x86.ActiveCfg = Release|Win32
+		{71657576-CCAD-4030-A485-5263249FE579}.Release|x86.Build.0 = Release|Win32
+		{AC19A3FE-59F5-4A81-9088-73B587E1AD13}.Debug|x64.ActiveCfg = Debug|x64
+		{AC19A3FE-59F5-4A81-9088-73B587E1AD13}.Debug|x64.Build.0 = Debug|x64
+		{AC19A3FE-59F5-4A81-9088-73B587E1AD13}.Debug|x86.ActiveCfg = Debug|Win32
+		{AC19A3FE-59F5-4A81-9088-73B587E1AD13}.Debug|x86.Build.0 = Debug|Win32
+		{AC19A3FE-59F5-4A81-9088-73B587E1AD13}.Release|x64.ActiveCfg = Release|x64
+		{AC19A3FE-59F5-4A81-9088-73B587E1AD13}.Release|x64.Build.0 = Release|x64
+		{AC19A3FE-59F5-4A81-9088-73B587E1AD13}.Release|x86.ActiveCfg = Release|Win32
+		{AC19A3FE-59F5-4A81-9088-73B587E1AD13}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

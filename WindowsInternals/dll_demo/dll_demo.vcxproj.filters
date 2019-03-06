@@ -26,5 +26,8 @@
     <ClCompile Include="sub.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="attach_deatach.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
