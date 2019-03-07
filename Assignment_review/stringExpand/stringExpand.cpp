@@ -15,28 +15,39 @@ int main()
 	output_string = new char[out_length];
 	output_string = expand(input_string, output_string);
 	cout << output_string << endl;
+	//delete input_string;
+	//delete output_string;
 	system("pause");
 	return 0;
 }
-char* expand(char* s1, char* s2)
+char* expand(char* in_string, char* out_string)
 {
-	int i, j=0, k;
-	for (i = 0; s1[i]; i++)
+	int index1 = 0, index2 = 0, index3 = 0, flag = 0;
+	for (index1 = 0; in_string[index1]; index1++)
 	{
-		if (s1[i] == '-')
+		if (in_string[index1] == '-')
 		{
-			for (k = s2[j - 1] + 1; k < s1[i + 1]; k++)
+			if (in_string[index1 - 1] > in_string[index1 + 1])
 			{
-				s2[j] = k;
-				j++;
+				cout << "Invalid input" << endl;
+				flag = 1;
+				break;
+			}
+			for (index3 = out_string[index2 - 1] + 1; index3 < in_string[index1 + 1]; index3++)
+			{
+				out_string[index2] = index3;
+				index2++;
 			}
 		}
 		else
 		{
-			s2[j] = s1[i];
-			j++;
+			out_string[index2] = in_string[index1];
+			index2++;
 		}
 	}
-	s2[j] = '\0';
-	return s2;
+	if (flag == 1)
+		out_string[0] = '\0';
+	else
+		out_string[index2] = '\0';
+	return out_string;
 }

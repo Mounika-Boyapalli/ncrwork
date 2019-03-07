@@ -73,9 +73,9 @@ _stack_::~_stack_()
 {
 	delete sta.s;
 }
-int convert(char g)
+int convert(char character)
 {
-	switch (g)
+	switch (character)
 	{
 	case '0': return 0;
 		      break;
@@ -111,57 +111,94 @@ int add(int, int);
 int sub(int, int);
 int mul(int, int);
 int divi(int, int);
-int r=-1;
+int result=-1;
 int main()
 {
-	_stack_ o, s;
-	char *e = NULL;
-	int length = 0, i, temp;
-    int a, b;
+	_stack_ operand, symbol;
+	char *expression = NULL;
+	int length = 0, index = 0, temp_var = 0;
+    int variable1 = 0, variable2 = 0;
 	cout << "Enter the length of the expression to be evaluated" << endl;
 	cin >> length;
-	o.getsize(length);
-	s.getsize(length);
-	e = new char[length];
+	operand.getsize(length);
+	symbol.getsize(length);
+	expression = new char[length];
 	cout << "Enter the expression to be evaluated" << endl;
-	cin >> e;
-	for (i = 0; i < length; i++)
+	cin >> expression;
+	for (index = 0; index < length; index++)
 	{
-		if (e[i] == '+' || e[i] == '-' || e[i] == '*' || e[i] == '/')
+		if (expression[index] == '(' || expression[index] == '[' || expression[index] == '{' || expression[index] == ')' || expression[index] == ']' || expression[index] == '}')
 		{
-			if (s.IsEmpty() == 1)
+			cout << "Brackets are invalid inputs" << endl;
+			system("pause");
+			return -1;
+		}
+		if (expression[index] == '+' || expression[index] == '-' || expression[index] == '*' || expression[index] == '/')
+		{
+			if (expression[index + 1] == '-')
 			{
-				s.push(convert(e[i]));
+				cout << "Negative integers are not applicable" << endl;
+				system("pause");
+				return -1;
 			}
-			if (convert(e[i]) > s.peek())
+			if (symbol.IsEmpty())
 			{
-				s.push(convert(e[i]));
+				symbol.push(convert(expression[index]));
+				continue;
+			}
+			if (convert(expression[index]) > symbol.peek())
+			{
+				symbol.push(convert(expression[index]));
 			}
 			else
 			{
-				a = o.pop();
-				b = o.pop();
-				switch (s.pop())
+				variable1 = operand.pop();
+				variable2 = operand.pop();
+				switch (symbol.pop())
 				{
-				case '*':  r = mul(b, a);
-					       break;
-				case '/':  r = divi(b , a);
-					       break;
-				case '+':  r = add(b, a);
-					       break;
-				case '-':  r = sub(b, a);
-					       break;
+				case 5:  result = mul(variable2, variable1);
+					     break;
+				case 4:  result = divi(variable2 , variable1);
+					     break;
+				case 3:  result = add(variable2, variable1);
+					     break;
+				case 2:  result = sub(variable2, variable1);
+					     break;
 				}
-				s.push(convert(e[i]));
-				o.push(r);
+				symbol.push(convert(expression[index]));
+				operand.push(result);
 			}
 		}
-		else if ('0' <= e[i] <= '9')
+		else if ('0' <= expression[index] <= '9')
 		{
-			o.push(convert(e[i]));
+			/*if ('0' <= expression[index+1] <= '9' )
+			{
+				operand.push((10 * convert(expression[index])) + convert(expression[++index]));
+			}
+			else*/
+				operand.push(convert(expression[index]));
 		}
 	}
-	cout << "Answer is " << o.pop() << endl;
+	while (!symbol.IsEmpty())
+	{
+		variable1 = operand.pop();
+		variable2 = operand.pop();
+		switch (symbol.pop())
+		{
+		case 5:  result = mul(variable2, variable1);
+			     break;
+		case 4:  result = divi(variable2, variable1);
+			     break;
+		case 3:  result = add(variable2, variable1);
+			     break;
+		case 2:  result = sub(variable2, variable1);
+			     break;
+		}
+		operand.push(result);
+	}
+	cout << "Answer is " << operand.pop() << endl;
+	symbol.~_stack_();
+	operand.~_stack_();
 	system("pause");
 	return 0;
 }
