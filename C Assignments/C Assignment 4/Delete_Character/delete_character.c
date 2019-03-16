@@ -2,45 +2,23 @@
 void delete(char *, char);
 int main()
 {
-	char s[50];
-
-	char c = 'a';
-
-
+	char input_string[50];
+	char char_to_be_deleted = 'a';
 	printf("\nEnter the string");
-
-
-	scanf("%[^\n]s", s);
-
-
-	delete(s, c);
-
-
+	scanf_s("%[^\n]s", input_string);
+	delete(input_string, char_to_be_deleted);
+	getch();
 	return 0;
-
 }
-
-
 void delete(char *a, char c)
-
 {
-
-	int i, l;
-
-	for (l = 0; a[l]; l++);
-
-	for (i = 0; i < l; i++)
-
+	int index = 0, length = 0;
+	for (length = 0; a[length]; length++);
+	for (index = 0; index < length; index++)
 	{
-
-		if (a[i] != c)
-
+		if (a[index] != c)
 		{
-
-			printf("%c", a[i]);
-
+			printf("%c", a[index]);
 		}
-
 	}
-
 }
