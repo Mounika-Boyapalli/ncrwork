@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="invert_p.c">
+    <ClCompile Include="invert_position.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
