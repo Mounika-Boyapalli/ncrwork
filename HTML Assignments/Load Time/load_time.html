@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title> Load Time </title>
+</head>
+<body>
+    <h4> Automation </h4>
+    <p id="p1"> Apart from using robots in its warehouses and drones for deliveries, Amazon – the gold standard of supply chain automation – is using autonomous trucks and forklifts to cut down delivery costs. </p>
+    <p id="p2" onclick="getTime()"> Calculate load time </p>
+    <p id="p3"> </p>
+
+
+    <script>
+	function getTime(){
+		var now= new Date().getTime();
+		var t = performance.timing.navigationStart;
+		var w = now - t;
+		document.getElementById("p3").innerHTML = "Load time is "+w;
+    }
+    </script>
+</body>
+</html>
+

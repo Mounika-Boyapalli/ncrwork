@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <title> Event Listner </title>
+</head>
+<body>
+    <input id="btn" type="submit" value="Submit" />
+    <p id="p"> </p>
+
+    <script>
+    document.getElementById("btn").addEventListener("click",function displayInf(){
+	    document.getElementById("p").innerHTML = "Successfully Submitted";
+    });
+    </script>
+</body>
+</html>

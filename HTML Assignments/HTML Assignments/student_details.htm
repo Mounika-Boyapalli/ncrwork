@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE> Student Details </TITLE>
+</HEAD>
+<BODY>
+    <form>
+        <input id="name" type="text" required placeholder="Enter your name" /><br>
+        <input id="pic" type="file" accept="image/png, image/jpeg" placeholder="Select a photo" /><br>
+        <input id="dob" type="date" onchange="calculateAge()" required placeholder="Enter your dob" /></br>
+        <input id="dept" type="text" required placeholder="Enter your branch" /><br>
+        <input id="sub" type="submit" value="Submit" onclick="displayD()" />
+        <h7 id="one"> </h7>
+    </form>
+
+    <script>
+        function calculateAge()
+        {
+            var verify_name = document.getElementById("name").value;
+            var reg_exp = new RefExp('^[a-z A-Z]+$');
+            if (!reg_exp.test(verify_name)) { alert("Enter Valid Name")}
+            var currDate = new Date();
+            var currYear = currDate.getFullYear();
+            var currMonth = currDate.getMonth();
+            
+            var dt = document.getElementById("dob").value;
+            var birth_date = new Date(dt);
+            
+            var birth_year = birth_date.getFullYear();
+            var birth_month = birth_date.getMonth();
+            var calc_year = curr_year - birth_year;
+            var calc_month = curr_month - birth_month;
+            if (calc_month < 0)
+                calc_year = calc_year - 1;
+            final_result = calc_year.toString();
+            var field = document.createElement("input");
+            field.text = "text";
+            field.id = "two";
+            document.body.appendChild(field);
+            document.getElementById("two").value = final_result;
+        }
+        function displayD()
+        {
+            document.getElementById("one").innerHTML="Successfully Submitted";
+        }
+    </script>
+
+</BODY>
+</HTML>
