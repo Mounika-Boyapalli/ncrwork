@@ -24,5 +24,4 @@ int replace(char a[])
 		}
 	printf("\n%s", a);
 	return x;
-
 }

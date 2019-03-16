@@ -1,19 +1,19 @@
 #include<stdio.h>
 int main()
 {
-	char s[50];
+	char input_string[50];
 	int len, i;
 	printf("\nEnter a string");
-	scanf_s("%[^\n]s", s);
-	for (len = 0; s[len]; len++);
+	scanf_s("%[^\n]s", input_string);
+	for (len = 0; input_string[len]; len++);
 	for (i = 0; i < len; i++)
 	{
-		if ((s[i] <= 65) && (s[i] >= 90))
-			s[i] = s[i] + 32;
-		if ((s[i] <= 97) && (s[i] >= 122))
-			s[i] = s[i] - 32;
+		if ((input_string[i] <= 65) && (input_string[i] >= 90))
+			input_string[i] = input_string[i] + 32;
+		if ((input_string[i] <= 97) && (input_string[i] >= 122))
+			input_string[i] = input_string[i] - 32;
 	}
-	printf("%[^\n]s", s);
+	printf("%[^\n]s", input_string);
 	getch();
 	return 0;
 }
