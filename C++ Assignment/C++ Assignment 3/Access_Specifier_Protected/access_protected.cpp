@@ -4,6 +4,10 @@ class A
 {
 	int private_a;
 protected: int protected_a;
+		   void print_P_A()
+		   {
+			   cout << "Private_a is " << private_a << endl << "Protected_a is " << protected_a << endl << "Public_a is " << public_a << endl;
+		   }
 public: int public_a;
 		A()
 		{
@@ -24,6 +28,10 @@ class B : protected A
 {
 	int private_b;
 protected: int protected_b;
+		   void print_P_B()
+		   {
+			   cout << "Private_b is " << private_b << endl << "Protected_b is " << protected_b << endl << "Public_b is " << public_b << endl;
+		   }
 public: int public_b;
 		B()
 		{
@@ -54,7 +62,11 @@ int main()
 	cout << endl;
 	//b_obj.print_A();
 	cout << endl;
+	b_obj.print_P_A();
+	cout << endl;
 	b_obj.print_B();
+	cout << endl;
+	b_obj.print_P_B();
 	cout << endl;
 	system("pause");
 	return 0;

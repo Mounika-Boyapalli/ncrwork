@@ -14,14 +14,14 @@ public: string_c()
 		{
 			length = strlen(s);
 			name = (char *)malloc(sizeof(char)*(length + 1));
-			strcpy_s(name,length,s);
+			strcpy(name, s);
 		}
-		/*string_c(const string &temp)
+		string_c(const string_c &temp)
 		{
 			length = temp.length;
-			name = (char *)malloc(sizeof(char)*(length + 1));
-			strcpy_s(name,length,temp.name);
-		}*/
+			name = new char[length + 1];
+			strcpy(name,temp.name);
+		}
 		void display()
 		{
 			cout << name << endl;
@@ -40,9 +40,9 @@ public: string_c()
 int main()
 {
 	string_c string1("mounika");
-	//string_c string2(string1);
+	string_c string2(string1);
 	string1.display();
-	//string2.display();
+	string2.display();
 	string1.~string_c();
 	system("pause");
 	return 0;

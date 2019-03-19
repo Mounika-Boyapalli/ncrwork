@@ -1,12 +1,11 @@
 #include<iostream>
 using namespace std;
-//template <class T>
-int linear_search (char* a[], int n, char* element)
+template <class T>
+int linear_search (T a[], int n, T element)
 {
 	int index = 0, flag = 0;
 	for (index = 0; index < n; index++)
 	{
-		//cout << a[index] << endl;
 		if (strcmp(a[index],element) == 0)
 		{
 			flag = 1;
@@ -17,6 +16,7 @@ int linear_search (char* a[], int n, char* element)
 }
 int main()
 {
+	linear_search <char*>;
 	char **array = NULL, *key = NULL;
 	int row = 0, column = 0;
 	int element = 0, index_1 = 0, index_2 = 0, flag = 0, length = 0;
