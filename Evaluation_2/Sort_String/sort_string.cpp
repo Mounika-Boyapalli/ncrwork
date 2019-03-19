@@ -94,14 +94,19 @@ ostream& operator<<(ostream& cout, mystring s1)
 void sort()
 {
 	mystring string_s[10];
-	int no = 0, index = 0, length = 0;
+	int no = 0, index_1 = 0, index_2 = 0, length = 0;
 	cout << "Enter the number of strings" << endl;
 	cin >> no;
-	for (index = 0; index < no; index++)
+	for (index_1 = 0; index_1 < no; index_1++)
 	{
-		cout << "Enter the length of the string" << endl;
-		cin >> length;
-		
+		cin >> string_s[index_1];
+	}
+	for (index_1 = 0; index_1 < no; index_1++)
+	{
+		for (index_2 = 0; index_2 < no - index_1; index_2++)
+		{
+			
+		}
 	}
 }
 int main()
