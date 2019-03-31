@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{4391032C-F671-489E-8F6E-D17316B57BCC}</ProjectGuid>
-    <RootNamespace>sample</RootNamespace>
+    <ProjectGuid>{137FBC96-ADA6-438D-AAD0-5C0FD891BAC6}</ProjectGuid>
+    <RootNamespace>AddSub</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,8 +115,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\C++ Assignment\C++ Assignment 2\String_Overload\string_overload.cpp" />
-    <ClCompile Include="..\..\DS\ds_sll\ds_sll\ds_sll.cpp" />
+    <ClCompile Include="add_sub_abs.cpp" />
+    <ClCompile Include="add_sub_op.cpp" />
+    <ClCompile Include="source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

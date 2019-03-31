@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\DS\ds_sll\ds_sll\ds_sll.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\C++ Assignment\C++ Assignment 2\String_Overload\string_overload.cpp">
+    <ClCompile Include="polygon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
