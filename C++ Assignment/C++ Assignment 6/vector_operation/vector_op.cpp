@@ -12,7 +12,8 @@ void show(vector <int> v)
 }
 int main()
 {
-	vector <int> v;
+	vector <int> v, v_reverse;
+	vector <int> ::iterator i;
 	int choice = 0, element = 0, index_1 = 0, index_2 = 0, temp = 0;
 	while (1)
 	{
@@ -56,7 +57,7 @@ int main()
 				}
 				show(v);
 				break;
-		case 4: cout << "Writing...." << endl;
+		case 4: 
 				break;
 		case 5: cout << "Size of the vector is " << v.size() << endl;
 			break;
